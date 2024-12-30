@@ -1,0 +1,236 @@
+{
+    "info": {
+        "_postman_id": "2b9feaa1-90d3-4dcb-8f03-cd6eacbe8b77",
+        "name": "Project_Managemen_Api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "27302073"
+    },
+    "item": [{
+            "name": "User Signup",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"username\": \"abhijeet@gmail.com\",\r\n  \"password\": \"12345\"\r\n}\r\n",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3000/signup",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "signup"
+                    ]
+                }
+            },
+            "response": [{
+                "name": "Post_User_SignUp",
+                "originalRequest": {
+                    "method": "POST",
+                    "header": [{
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\r\n  \"username\": \"abhijeet@gmail.com\",\r\n  \"password\": \"12345\"\r\n}\r\n",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "http://localhost:3000/signup",
+                        "protocol": "http",
+                        "host": [
+                            "localhost"
+                        ],
+                        "port": "3000",
+                        "path": [
+                            "signup"
+                        ]
+                    }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [{
+                        "key": "X-Powered-By",
+                        "value": "Express"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json; charset=utf-8"
+                    },
+                    {
+                        "key": "Content-Length",
+                        "value": "47"
+                    },
+                    {
+                        "key": "ETag",
+                        "value": "W/\"2f-osP7Y4mq3q6W07h0bISmAt7LAHo\""
+                    },
+                    {
+                        "key": "Date",
+                        "value": "Mon, 30 Dec 2024 08:45:13 GMT"
+                    },
+                    {
+                        "key": "Connection",
+                        "value": "keep-alive"
+                    },
+                    {
+                        "key": "Keep-Alive",
+                        "value": "timeout=5"
+                    }
+                ],
+                "cookie": [],
+                "body": "{\n    \"message\": \"Signup successful. Please log in.\"\n}"
+            }]
+        },
+        {
+            "name": "User Login",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"username\": \"abhijeet@gmail.com\",\r\n  \"password\": \"12345\"\r\n}\r\n",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3000/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Fetch All Projects",
+            "request": {
+                "method": "GET",
+                "header": [{
+                    "key": "Authorization",
+                    "value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzM1NTQ4ODc4LCJleHAiOjE3MzU1NTI0Nzh9.ojhCgx6KJ7AqK4M5F-qtD1pS9cpnFhu3mZlFM5YWm88",
+                    "type": "text"
+                }],
+                "url": {
+                    "raw": "http://localhost:3000/projects",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "projects"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add a New Project",
+            "request": {
+                "method": "POST",
+                "header": [{
+                        "key": "Authorization",
+                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzM1NTQ4ODc4LCJleHAiOjE3MzU1NTI0Nzh9.ojhCgx6KJ7AqK4M5F-qtD1pS9cpnFhu3mZlFM5YWm88",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"title\": \"New Project\",\r\n  \"description\": \"Project description\",\r\n  \"start_date\": \"2024-01-01\",\r\n  \"end_date\": \"2024-12-31\"\r\n}\r\n",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3000/add-project",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "add-project"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Contact Us",
+            "request": {
+                "method": "POST",
+                "header": [{
+                        "key": "Authorization",
+                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzM1NTQ4ODc4LCJleHAiOjE3MzU1NTI0Nzh9.ojhCgx6KJ7AqK4M5F-qtD1pS9cpnFhu3mZlFM5YWm88",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"name\": \"Abhijeet\",\r\n  \"email\": \"abhijeet@gmail.com\",\r\n  \"message\": \"I have a question about the project.\"\r\n}\r\n",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3000/contact",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "contact"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

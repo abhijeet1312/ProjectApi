@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+    <div class="container my-5">
+        <!-- Jumbotron Header -->
+        <div class="jumbotron text-center bg-primary text-white">
+            <i class="fas fa-key fa-6x mb-3"></i>
+            <h1 class="display-4">My Projects Dashboard</h1>
+            <p class="lead">Manage all your projects in one place.</p>
+        </div>
+
+        <!-- Project List -->
+        <div class="row">
+            <% if (projects.length > 0) { %>
+                <% projects.forEach(project => { %>
+                    <div class="col-md-4 mb-4">
+                        <!-- Project Card -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="/projects/<%= project.id %>" class="text-decoration-none text-primary">
+                                        <%= project.title %>
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    <%= project.description %>
+                                </p>
+                                <p class="card-text text-muted">
+                                    <strong>Start Date:<%= new Date(project.start_date).toLocaleDateString() %></strong>
+                                    <br>
+                                    <strong>End Date:<%= new Date(project.end_date).toLocaleDateString() %></strong>
+                                </p>
+                                <form action="/projects/<%= project.id %>/delete" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <!-- No Projects Message -->
+                            <div class="col-12 text-center">
+                                <p class="text-muted">You have no projects yet. Add your first project now!</p>
+                            </div>
+                            <% } %>
+        </div>
+
+        <!-- Add Project Button -->
+        <div class="text-center mt-4">
+            <a href="/add-project" class="btn btn-success btn-lg">Add New Project</a>
+            <a href="/contact" class="btn btn-primary btn-lg ms-3">Contact Us</a>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="text-center mt-3">
+            <form action="/logout" method="POST">
+                <button type="submit" class="btn btn-secondary">Log Out</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>

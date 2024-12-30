@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+    <div class="container my-5">
+        <!-- Jumbotron Header -->
+        <div class="jumbotron text-center bg-primary text-white">
+            <i class="fas fa-key fa-6x mb-3"></i>
+            <h1 class="display-4">Add New Project</h1>
+            <p class="lead">Create a new project and manage it effectively!</p>
+        </div>
+
+        <!-- Add Project Form -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/add-project" method="POST" class="bg-light p-4 rounded shadow-sm">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" class="form-control" placeholder="Enter project title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" class="form-control" rows="3" placeholder="Enter project description"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start_date">Start Date:</label>
+                        <input type="date" id="start_date" name="start_date" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end_date">End Date:</label>
+                        <input type="date" id="end_date" name="end_date" class="form-control" required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-lg">Add Project</button>
+                        <a href="/projects" class="btn btn-secondary btn-lg">Back to Projects</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
