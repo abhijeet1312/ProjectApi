@@ -1,8 +1,40 @@
+
 # **Project Management API**  
 A Node.js application that provides a platform for user authentication, project management, and contact form submissions.
 
 ---
 
+
+# **Below are some screenshots of applications**
+
+**Home page** 
+![screenshot 1](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235607.png)
+
+
+
+**SignIN page** 
+![screenshot 2](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235647.png)
+
+
+**LoginIN page** 
+![screenshot 3](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235717.png)
+
+
+**Dashboard page** 
+![screenshot 4](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235736.png)
+
+
+**Add Project page** 
+![screenshot 5](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235857.png)
+
+
+**Add Project page** 
+![screenshot 6](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235920.png)
+
+
+
+**Contact page** 
+![screenshot 7](https://github.com/abhijeet1312/ProjectApi/blob/main/images/Screenshot%202024-12-30%20235956.png)
 ## **Table of Contents**  
 - [Installation](#installation)  
 - [Usage](#usage)  
@@ -87,10 +119,13 @@ CREATE TABLE contact_form (
     email VARCHAR(255),
     message TEXT
 );
-
-
-
-
-
+CREATE TABLE projects (
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL REFERENCES users(id),
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    start_date DATE,
+    end_date DATE
+);
 
 
