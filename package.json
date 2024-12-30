@@ -2,7 +2,7 @@
     "name": "project-jmd",
     "version": "1.0.0",
     "main": "index.js",
-    "engines": { "node": "18.x" },
+    "engines": { "node": "20.x" },
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
